@@ -1,4 +1,4 @@
-const Matematica = require('./Matematica')
+import * as Matematica from './Matematica';
 let n1: number = 10;
 let n2: number = 20;
 console.log(`Soma: ${Matematica.Somar(n1, n2)}`);
