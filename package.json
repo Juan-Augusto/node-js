@@ -1,0 +1,28 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "node study repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "watch-ts": "tsc --w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juan-Augusto/node-js.git"
+  },
+  "keywords": [
+    "node",
+    "study"
+  ],
+  "author": "juan augusto <juanaugusto1@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Juan-Augusto/node-js/issues"
+  },
+  "homepage": "https://github.com/Juan-Augusto/node-js#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.31"
+  }
+}
