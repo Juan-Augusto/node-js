@@ -3,7 +3,7 @@ import { Router, Request, Response } from "express";
 const router = Router();
 
 router.get("/", (req: Request, res: Response) => {
-    res.send("Hello World!");
+    res.render('home');
 });
 
 router.get("/contato", (req: Request, res: Response) => {
@@ -12,8 +12,6 @@ router.get("/contato", (req: Request, res: Response) => {
 router.get('/sobre', (req: Request, res: Response) => {
     res.send('Página sobre');
 });
-router.get('/*', (req: Request, res: Response) => {
-    res.send('Página não encontrada');
-})
+
 
 export default router;
