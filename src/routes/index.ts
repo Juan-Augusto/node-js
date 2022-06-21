@@ -18,7 +18,26 @@ router.get("/", (req: Request, res: Response) => {
     };
     res.render('home', {
         user,
-        showAge
+        showAge,
+        simpleList: [
+            'Item 1',
+            'Item 2',
+            'Item 3',
+        ] ,
+        products: [
+            {
+                title: 'Product 1',
+                price: 10,
+            },
+            {
+                title: 'Product 2',
+                price: 20,
+            },
+            {
+                title: 'Product 3',
+                price: 30,
+            }
+        ]
     });
 });
 
