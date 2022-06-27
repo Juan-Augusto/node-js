@@ -34,19 +34,5 @@
     <body>
         {{>partials/header}}
         <hr>
-        <ul>
-            <h2>Produtos</h2>
-            {{#products}}
-                <li>{{ title }} - R$ {{price}},00</li>
-            {{/products}}
-        </ul>
-        <ul>
-            <h2>Daily phrases</h2>
-            {{#simpleList}}
-                <li>{{.}}</li>
-            {{/simpleList}}
-            {{^simpleList}}
-                <li>Não há frases para mostrar</li>
-            {{/simpleList}}
-        </ul>
+        <h1>Contact Page</h1>
         {{>partials/footer}}

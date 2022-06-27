@@ -13,7 +13,7 @@ router.get("/", (req: Request, res: Response) => {
     let user  = {
         name: 'Juan Augusto',
         email: 'juanaugusto1@main.com',
-        age: 22,
+        age: userAge,
         profile_pic: 'https://yt3.ggpht.com/yti/APfAmoFpCw3aOM6yumulCWvbKnuuC3quHD-qZei2NcSyjw=s88-c-k-c0x00ffffff-no-rj-mo',
     };
     res.render('home', {
@@ -42,10 +42,10 @@ router.get("/", (req: Request, res: Response) => {
 });
 
 router.get("/contato", (req: Request, res: Response) => {
-    res.send('Formulário de contato');
+    res.render('contact');
 });
 router.get('/sobre', (req: Request, res: Response) => {
-    res.send('Página sobre');
+    res.render('about');
 });
 
 

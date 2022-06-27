@@ -1,0 +1,17 @@
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+    <h1>Home Page</h1>
+    <div class="user--container">
+        <div style="display: flex; flex-direction: column;">
+            <p>{{ user.name }}</p>
+            {{#showAge}}
+                <p>{{user.age}} anos</p>
+            {{/showAge}}
+            {{^showAge}}
+                <p>Não informado</p>
+            {{/showAge}}
+        </div>
+        <div style="clip-path: circle(); width: 80px;">
+            <img src={{ user.profile_pic }} alt="">
+        </div>
+    </div>
+</div>
