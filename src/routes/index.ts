@@ -16,7 +16,7 @@ router.get("/", (req: Request, res: Response) => {
         age: userAge,
         profile_pic: 'https://yt3.ggpht.com/yti/APfAmoFpCw3aOM6yumulCWvbKnuuC3quHD-qZei2NcSyjw=s88-c-k-c0x00ffffff-no-rj-mo',
     };
-    res.render('home', {
+    res.render('pages/home', {
         user,
         showAge,
         simpleList: [
@@ -42,11 +42,16 @@ router.get("/", (req: Request, res: Response) => {
 });
 
 router.get("/contato", (req: Request, res: Response) => {
-    res.render('contact');
+    res.render('pages/contact');
 });
 router.get('/sobre', (req: Request, res: Response) => {
-    res.render('about');
+    res.render('pages/about');
 });
-
+router.get('/nome', (req: Request, res: Response) => {
+    let mainName:string = req.query.nome as string;
+    res.render('pages/nome', {
+        mainName
+    });
+});
 
 export default router;
