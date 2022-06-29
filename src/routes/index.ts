@@ -47,11 +47,29 @@ router.get("/contato", (req: Request, res: Response) => {
 router.get('/sobre', (req: Request, res: Response) => {
     res.render('pages/about');
 });
+
 router.get('/nome', (req: Request, res: Response) => {
     let mainName:string = req.query.nome as string;
+    let mainAge:string = req.query.idade as string;
     res.render('pages/nome', {
-        mainName
+        mainName,
+        mainAge
     });
 });
+router.get('/idade', (req: Request, res: Response) => {
+    let showAge : boolean = false;
+    let age = 0;
+
+    if (req.query.year) {
+        let year: number = parseInt(req.query.year as string);
+        let currentYear: number = new Date().getFullYear();
+        age = currentYear - year;
+        showAge = true;
+    }
+    res.render('pages/age',{
+        age,
+        showAge
+    })
+})
 
 export default router;
