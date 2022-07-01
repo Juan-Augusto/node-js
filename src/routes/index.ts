@@ -57,11 +57,16 @@ router.get('/nome', (req: Request, res: Response) => {
     });
 });
 router.get('/idade', (req: Request, res: Response) => {
+    res.render('pages/age')
+    }
+);
+
+router.post('/idade-resultado', (req: Request, res: Response) => {
     let showAge : boolean = false;
     let age = 0;
 
-    if (req.query.year) {
-        let year: number = parseInt(req.query.year as string);
+    if (req.body.year) { //necessário para que o express entenda que o body é um json e o servidor precisa da utilização do urlencoded para aceitar o formulário
+        let year: number = parseInt(req.body.year as string);
         let currentYear: number = new Date().getFullYear();
         age = currentYear - year;
         showAge = true;
@@ -71,5 +76,4 @@ router.get('/idade', (req: Request, res: Response) => {
         showAge
     })
 })
-
 export default router;
