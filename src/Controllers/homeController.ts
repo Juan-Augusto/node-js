@@ -1,6 +1,10 @@
 import { Request, Response } from "express";
+import { Product } from "../Models/Product";
 
 export const home = (req: Request, res: Response) => {
+    let list = Product.getAll();
+    let expensiveList = Product.getPriceFromMax(15);
+
     let userAge : number = 22;
     let showAge : boolean = false;
 
@@ -22,19 +26,7 @@ export const home = (req: Request, res: Response) => {
             'Item 2',
             'Item 3',
         ] ,
-        products: [
-            {
-                title: 'Product 1',
-                price: 10,
-            },
-            {
-                title: 'Product 2',
-                price: 20,
-            },
-            {
-                title: 'Product 3',
-                price: 30,
-            }
-        ]
+        products: list,
+        expensive: expensiveList
     });
 };

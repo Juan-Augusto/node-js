@@ -41,6 +41,12 @@
             {{/products}}
         </ul>
         <ul>
+            <h2>Produtos a partir de R$ 15, 00</h2>
+            {{#expensive}}
+                <li>{{ title }} - R$ {{price}},00</li>
+            {{/expensive}}
+        </ul>
+        <ul>
             <h2>Daily phrases</h2>
             {{#simpleList}}
                 <li>{{.}}</li>
